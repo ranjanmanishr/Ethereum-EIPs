@@ -2,7 +2,7 @@
 eip: TBD
 title: Muir Glacier upgrade assessment report
 author: James Hancock and Pooja Ranjan 
-discussions-to: 
+discussions-to: https://ethereum-magicians.org/t/hard-fork-to-address-the-ice-age-eip-2387
 type: Informational
 status: Draft
 created: 2020-06-24
@@ -28,7 +28,13 @@ Ethereum is growing and documentation of decisions & events that occurred during
 * Total Difficulty: 13,525,747,653,928,155,934,639
 * Block number (Ropsten): 7117117
 
-*Data collected from Etherscan.*
+*Data collected from [Etherscan](https://etherscan.io/block/9200000).*
+
+
+The Muir Glacier upgrade included the EIP for pushing back Ice Age. 3 out of 4 clients were perfect, and 4th client had a quick update after the fork without any negative effects. It took a day for block time to reduce to normal.
+
+**Mainnet deployment before Ropsten** - Mainnet went to 17 second blocks instead of the forecast 19-20s blocks. Ropsten was at 28s per https://ropsten-stats.parity.io/ which was originally calculated for about 6 Jan or so. Ropsten slowdown and mainnet speedup was pretty much the opposite of expectations. 
+
 
 ### EIP Included 
 
@@ -63,12 +69,17 @@ Previously, the increase in difficulty level was [predicted](https://www.reddit.
 * Nov 29th - 7117117 Ropsten Block number Suggested. Predicted 6th of Jan https://gitter.im/ethereum/AllCoreDevs?at=5de1317ab065c6433c08cf7d
 * Nov 29th - Decision to not included PoA Chains because muir glacier never activates on PoA chains -- thus have zero impact on forkid
 * Nov 29th - EIP-2384 and EIP-2387 moved to [Last Call](https://github.com/ethereum/EIPs/pull/2408)
-* Dec 13th - [ACD meeting 77](https://github.com/ethereum/pm/blob/master/All%20Core%20Devs%20Meetings/Meeting%2077.md) The difficulty bomb (4 mil blocks) will be addressed at some point post Muir Glacier upgrade.
+* Dec 13th - [ACD meeting 77](https://github.com/ethereum/pm/blob/master/All%20Core%20Devs%20Meetings/Meeting%2077.md) The difficulty bomb (4 mil blocks) will be addressed at some point post Muir Glacier upgrade
+* Dec 16th - [All clients ready](https://gitter.im/ethereum/AllCoreDevs?at=5df82418578ecf4b1fb7991a)
+* Dec 16th - Ethereum [Muir Glacier Upgrade blog](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210) published by the Ethereum cat Herders
+* Dec 30th - Nethermind and [Parity Ethereum nodes syncing issue](https://gitter.im/ethereum/AllCoreDevs?at=5e0abb7e2640a676295a0d6d) 
+* Dec 31st - [Parity Ethereum bug fixed](https://www.parity.io/new-parity-ethereum-update-protects-against-possible-attack/)
+* Jan 02nd - [Community call](https://gitter.im/ethereum/AllCoreDevs?at=5e0da713eaa2cd096fde7365) for Muir Glacier 
+* Jan 02nd - [Nethermind's bug fixed](https://gitter.im/ethereum/AllCoreDevs?at=5e0ddf550fd3413f4c942e6c)
 
 #### Implementation
-* Jan 02, 2020: Activation on Ethereum main network
-* Jan 13, 2020: Activation on Ropsten network
-
+* Jan 02, 2020: Activation on [Ethereum main network](https://etherscan.io/block/9200000)
+* Jan 13, 2020: Activation on [Ropsten network](https://ropsten.etherscan.io/block/7117117)
 
 ### Best Practices
 * Have the EF reblog content from other sources
@@ -76,8 +87,11 @@ Previously, the increase in difficulty level was [predicted](https://www.reddit.
 ### Suggested Corrective Action
 (Problem and suggestions)
 
+#### Testing window duration
+The testing window planned was too short. We should avoid the mainnet to upgrade before testnet for any changes.
+
 #### Ropsten Blocks being really irregular.
-(TO DO)
+More aggressive calculation for difficulty bomb is required. Recommended research post is [here](https://ethresear.ch/t/deep-dive-into-current-pow-difficulty-adjustment-algorithm-and-a-possible-alternative/5267/12).
 
 #### There isn’t a process for checking important dates/blocks for interclient coordination. 
 Suggested Solution: 
