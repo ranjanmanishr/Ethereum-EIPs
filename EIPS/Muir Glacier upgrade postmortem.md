@@ -72,6 +72,7 @@ Previously, the increase in difficulty level was [predicted](https://www.reddit.
 * Dec 13th - [ACD meeting 77](https://github.com/ethereum/pm/blob/master/All%20Core%20Devs%20Meetings/Meeting%2077.md) The difficulty bomb (4 mil blocks) will be addressed at some point post Muir Glacier upgrade
 * Dec 16th - [All clients ready](https://gitter.im/ethereum/AllCoreDevs?at=5df82418578ecf4b1fb7991a)
 * Dec 16th - Ethereum [Muir Glacier Upgrade blog](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210) published by the Ethereum cat Herders
+* Dec 23rd - [Ethereum Muir Glacier Upgrade Announcement](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/) by EF
 * Dec 30th - Nethermind and [Parity Ethereum nodes syncing issue](https://gitter.im/ethereum/AllCoreDevs?at=5e0abb7e2640a676295a0d6d) 
 * Dec 31st - [Parity Ethereum bug fixed](https://www.parity.io/new-parity-ethereum-update-protects-against-possible-attack/)
 * Jan 02nd - [Community call](https://gitter.im/ethereum/AllCoreDevs?at=5e0da713eaa2cd096fde7365) for Muir Glacier 
